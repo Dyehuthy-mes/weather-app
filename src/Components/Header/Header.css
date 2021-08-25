@@ -1,0 +1,33 @@
+.header{
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    background-color: #8080FF;
+    border-bottom: 1px solid black;
+
+}
+
+@media (max-width: 1000px){
+    header{
+            flex-direction: column;
+            align-items: flex-start;
+    }
+}
+
+.header__h1{
+    color: white;
+    margin-left: 4rem;
+    font-size: 40px;
+    font-family: 'Lucida Sans';
+    cursor: default;
+}
+
+.header__h2{
+    color: white;
+    font-size: 40px;
+    font-family: 'Lucida Sans';
+    cursor: default;
+    margin-right: 2rem;
+}

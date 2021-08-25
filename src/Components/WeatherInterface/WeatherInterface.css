@@ -1,0 +1,70 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-column-gap: 4rem;
+    grid-auto-rows: minmax(200px, auto);
+    margin-top: 8rem;
+    margin-left: 8rem;
+    color:#0019FF;
+    width: 50%;
+    text-align: center;
+    font-weight: bold;
+    cursor: default;
+    
+  }
+
+  .one {
+    grid-row: 1;
+    background-color: #FFFFFF;
+    width:8rem;
+    border: 1px solid #0019FF;
+  }
+
+  .two {
+    grid-row: 1;
+    background:linear-gradient(35deg, #f0c2c2, #FFFFFF);
+    width:8rem;
+    border: 1px solid #0019FF;
+    padding-top: 4.2rem;
+  }
+
+  .three {
+    grid-row: 1;
+    background:linear-gradient(35deg, #c2d4f0, #FFFFFF);
+    width:8rem;
+    border: 1px solid #0019FF;
+    padding-top: 4.2rem;
+  }
+
+  .four {
+    grid-row: 1;
+    background-color: #FFFFFF;
+    width:8rem;
+    border: 1px solid #0019FF;
+  }
+
+  .five {
+    grid-row: 1;
+    background-color: #FFFFFF;
+    width:8rem;
+    border: 1px solid #0019FF;
+  }
+
+  .six {
+    grid-row: 1;
+    background-color: #FFFFFF;
+    width:8rem;
+    border: 1px solid #0019FF;
+  }
+
+  p{
+    font-family: 'Lucida Sans';
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  img{
+    margin-top:2.5rem;
+    width: 24px;
+    height: 24px;
+  }
