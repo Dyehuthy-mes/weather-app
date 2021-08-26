@@ -36,6 +36,20 @@ function WeatherInterface() {
     useEffect(() => {
         getweather(active)
     }, [active])
+    
+   function messageToHenry(message){
+       if(temperature > 25){
+           message="It's warm today"
+       }
+       else if(temperature < 25 && temperature > 14){
+           message="Nice day"
+       }
+       else if(temperature < 14){
+           message="Cold day :/"
+       }
+       
+       return message
+   }
 
     return (
     <div>
@@ -44,7 +58,7 @@ function WeatherInterface() {
         <h2 className="header__h2">HowToday in: {active}</h2>
         <form>
         <select 
-           className="shape"  
+           className="select"  
            name="line" 
            id="bus"
            onChange={(value)=> setActive(value.target.value)}
@@ -56,6 +70,7 @@ function WeatherInterface() {
         </select>
         </form>
         </div>
+        <h2 className=" weatherinterface__message">{messageToHenry()}</h2>
     <div className="wrapper">
         <div className="one">
             <img src={Temperature}></img>

@@ -1,10 +1,25 @@
+.select{
+    outline:none;
+    border:none;  
+    border-radius: 20px 20px 20px 20px;
+    width: 12rem;
+    height: 2rem;
+    border: 1px solid black;
+    background: #e2f2ff;
+    margin-right: 5rem;
+    font-weight: bold;
+    font-family: 'Lucida Sans';
+    color: #1341ab;
+}
+
+
 .wrapper {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 4rem;
+    grid-column-gap: 2rem;
     grid-auto-rows: minmax(200px, auto);
-    margin-top: 8rem;
-    margin-left: 8rem;
+    margin-top: 6rem;
+    margin-left: 12rem;
     color:#0019FF;
     width: 50%;
     text-align: center;
@@ -18,6 +33,7 @@
     background-color: #FFFFFF;
     width:8rem;
     border: 1px solid #0019FF;
+    border-radius: 20px 20px 20px 20px;
   }
 
   .two {
@@ -26,6 +42,7 @@
     width:8rem;
     border: 1px solid #0019FF;
     padding-top: 4.2rem;
+    border-radius: 20px 20px 20px 20px;
   }
 
   .three {
@@ -34,6 +51,7 @@
     width:8rem;
     border: 1px solid #0019FF;
     padding-top: 4.2rem;
+    border-radius: 20px 20px 20px 20px;
   }
 
   .four {
@@ -41,6 +59,7 @@
     background-color: #FFFFFF;
     width:8rem;
     border: 1px solid #0019FF;
+    border-radius: 20px 20px 20px 20px;
   }
 
   .five {
@@ -48,6 +67,7 @@
     background-color: #FFFFFF;
     width:8rem;
     border: 1px solid #0019FF;
+    border-radius: 20px 20px 20px 20px;
   }
 
   .six {
@@ -55,6 +75,7 @@
     background-color: #FFFFFF;
     width:8rem;
     border: 1px solid #0019FF;
+    border-radius: 20px 20px 20px 20px;
   }
 
   p{
@@ -67,4 +88,10 @@
     margin-top:2.5rem;
     width: 24px;
     height: 24px;
+  }
+
+  .weatherinterface__message{
+    text-align: center;
+    color: #f8fbff;
+    padding: 0;
   }
