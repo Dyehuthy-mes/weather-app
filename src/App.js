@@ -5,7 +5,7 @@ import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
-    <div className="app">
+    <div>
       <WeatherInterface/>
       <Footer/>
     </div>

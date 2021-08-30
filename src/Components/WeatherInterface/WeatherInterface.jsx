@@ -4,6 +4,8 @@ import Wind from "../../static/wind.svg"
 import Temperature from "../../static/temperature.svg"
 import Humidity from "../../static/humidity.svg"
 import Pressure from "../../static/pressure.svg"
+import Plus from "../../static/plus.svg"
+import Sub from "../../static/sub.png"
 
 function WeatherInterface() {
     const [temperature, setTemperature] = useState()
@@ -19,10 +21,10 @@ function WeatherInterface() {
         const data = await fetchData.json()
 
         try{
-            setTemperature((data.main.temp - 273.15).toFixed(2))
-            setMaxtemp((data.main.temp_max - 273.15).toFixed(2))
+            setTemperature((data.main.temp - 273.15).toFixed(0))
+            setMaxtemp((data.main.temp_max - 273.15).toFixed(0))
             setHumidity(data.main.humidity)
-            setMintemp((data.main.temp_min - 273.15).toFixed(2))
+            setMintemp((data.main.temp_min - 273.15).toFixed(0))
             setPressure(data.main.pressure)
             setWind(data.wind.speed)
 
@@ -51,57 +53,62 @@ function WeatherInterface() {
        return message
    }
 
+
     return (
     <div>
+        <hr width="50%"/>
         <div className="header">
-        <h1 className='header__h1'>WeatherApp</h1>
-        <h2 className="header__h2">HowToday in: {active}</h2>
-        <form>
-        <select 
-           className="select"  
-           name="line" 
-           id="bus"
-           onChange={(value)=> setActive(value.target.value)}
-           >
-            <option value="England">England</option>
-            <option value="Argentina">Argentine</option>
-            <option value="Iran">Iran</option>
-            <option value="Venezuela">Venezuela</option>
-        </select>
-        </form>
+            <h1 className='header__h1'>WeatherApp</h1>
+            <h2 className="header__h2">HowToday in: {active}</h2>
+            <form >
+                <select 
+                className="select"  
+                name="line" 
+                id="bus"
+                onChange={(value)=> setActive(value.target.value)}
+                >
+                    <option className="option" value="England">England</option>
+                    <option className="option" value="Argentina">Argentine</option>
+                    <option className="option" value="Iran">Iran</option>
+                    <option  className="option"value="Venezuela">Venezuela</option>
+                </select>
+            </form>
         </div>
-        <h2 className=" weatherinterface__message">{messageToHenry()}</h2>
-    <div className="wrapper">
-        <div className="one">
-            <img src={Temperature}></img>
-            <p>Temperature</p>
-             {temperature}°
+        <hr width="50%"/>
+        <div className="wrapper">
+            <div className="one">
+                <img src={Temperature}></img>
+                <p>Temperature</p>
+                {temperature}°
+            </div>
+            <div className="two">
+                <img src={Plus}></img>
+                <p>Max</p> 
+                {maxtemp}°
+            </div>
+            <div className="three">
+                <img src={Sub}></img>
+                <p>Min</p> 
+                {mintemp}°
+            </div>
+            <div className="four">
+                <img src={Humidity}></img>
+                <p>Humidity</p>
+                {humidity}%
+            </div>
+            <div className="five">
+                <img src={Pressure}></img>
+                <p>Pressure</p>{pressure}
+            </div>
+            <div className="six">
+                <img src={Wind}></img>
+                <p>Wind Speed</p>
+                {wind} km
+            </div>
         </div>
-        <div className="two">
-            <p>Max</p> 
-            {maxtemp}°
-        </div>
-        <div className="three">
-            <p>Min</p> 
-            {mintemp}°
-        </div>
-        <div className="four">
-            <img src={Humidity}></img>
-            <p>Humidity</p>
-            {humidity}%
-        </div>
-        <div className="five">
-            <img src={Pressure}></img>
-            <p>Pressure</p>{pressure}
-        </div>
-        <div className="six">
-            <img src={Wind}></img>
-            <p>Wind Speed</p>
-            {wind} km
-        </div>
-    </div>
     </div>
     )
 }
+
 
 export default WeatherInterface

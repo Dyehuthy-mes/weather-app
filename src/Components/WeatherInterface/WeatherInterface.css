@@ -1,15 +1,21 @@
 .select{
     outline:none;
-    border:none;  
-    border-radius: 20px 20px 20px 20px;
-    width: 12rem;
-    height: 2rem;
-    border: 1px solid black;
-    background: #e2f2ff;
+    border-radius: 20px 0 20px 20px;
+    width: 16rem;
+    height: .9.8.7rem;
+    border: 1px solid rgb(255, 255, 255);
+    border-top: none;
+    border-left:none;
+    background-color: transparent;
     margin-right: 5rem;
     font-weight: bold;
     font-family: 'Lucida Sans';
-    color: #1341ab;
+    color: #ffffff;
+}
+
+.option{
+  background-color: transparent;
+
 }
 
 
@@ -18,64 +24,56 @@
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 2rem;
     grid-auto-rows: minmax(200px, auto);
-    margin-top: 6rem;
+    margin-top: 6.5rem;
     margin-left: 12rem;
-    color:#0019FF;
+    color:#f9f9f9;
     width: 50%;
     text-align: center;
     font-weight: bold;
     cursor: default;
-    
+    position: absolute;
   }
 
   .one {
     grid-row: 1;
-    background-color: #FFFFFF;
     width:8rem;
-    border: 1px solid #0019FF;
     border-radius: 20px 20px 20px 20px;
+    border: #f8fbff 2px solid;
   }
 
   .two {
     grid-row: 1;
-    background:linear-gradient(35deg, #f0c2c2, #FFFFFF);
     width:8rem;
-    border: 1px solid #0019FF;
-    padding-top: 4.2rem;
     border-radius: 20px 20px 20px 20px;
+    border: #f8fbff 2px solid;
   }
 
   .three {
     grid-row: 1;
-    background:linear-gradient(35deg, #c2d4f0, #FFFFFF);
     width:8rem;
-    border: 1px solid #0019FF;
-    padding-top: 4.2rem;
     border-radius: 20px 20px 20px 20px;
+    border: #f8fbff 2px solid;
   }
 
   .four {
     grid-row: 1;
-    background-color: #FFFFFF;
     width:8rem;
-    border: 1px solid #0019FF;
     border-radius: 20px 20px 20px 20px;
+    border: #f8fbff 2px solid;
   }
 
   .five {
     grid-row: 1;
-    background-color: #FFFFFF;
     width:8rem;
-    border: 1px solid #0019FF;
     border-radius: 20px 20px 20px 20px;
+    border: #f8fbff 2px solid;
   }
 
   .six {
     grid-row: 1;
-    background-color: #FFFFFF;
     width:8rem;
-    border: 1px solid #0019FF;
     border-radius: 20px 20px 20px 20px;
+    border: #f8fbff 2px solid;
   }
 
   p{
@@ -88,10 +86,6 @@
     margin-top:2.5rem;
     width: 24px;
     height: 24px;
+    filter: invert();
   }
 
-  .weatherinterface__message{
-    text-align: center;
-    color: #f8fbff;
-    padding: 0;
-  }

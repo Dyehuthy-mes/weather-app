@@ -1,7 +1,12 @@
 .footer{
     width: 100%;
-    height: 50px;
-    background-color: #0092ff;
-    border-top: 1px solid black;
-    margin-top: 7rem;
+    height: auto;
+    background-color: #ffffff;
+    margin-top: 14rem;
 }
+
+.weatherinterface__message{
+    text-align: center;
+    color: #000000;
+    font-size: 25px;
+  }
