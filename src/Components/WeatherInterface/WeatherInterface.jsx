@@ -23,8 +23,8 @@ function WeatherInterface() {
         try{
             setTemperature((data.main.temp - 273.15).toFixed(0))
             setMaxtemp((data.main.temp_max - 273.15).toFixed(0))
-            setHumidity(data.main.humidity)
             setMintemp((data.main.temp_min - 273.15).toFixed(0))
+            setHumidity(data.main.humidity)
             setPressure(data.main.pressure)
             setWind(data.wind.speed)
 
@@ -39,7 +39,8 @@ function WeatherInterface() {
         getweather(active)
     }, [active])
     
-   function messageToHenry(message){
+   const messageToHenry = (message) => {
+
        if(temperature > 25){
            message="It's warm today"
        }
@@ -71,6 +72,7 @@ function WeatherInterface() {
                     <option className="option" value="Argentina">Argentine</option>
                     <option className="option" value="Iran">Iran</option>
                     <option  className="option"value="Venezuela">Venezuela</option>
+                    
                 </select>
             </form>
         </div>
