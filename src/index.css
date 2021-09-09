@@ -1,12 +1,21 @@
+*,*:before, *:after{
+  box-sizing: inherit;
+}
+
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url("../src/static/worldwide.jfif");
   background-size: 100% 226%;
   background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
   
 }
 
+html{
+  box-sizing: border-box;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
